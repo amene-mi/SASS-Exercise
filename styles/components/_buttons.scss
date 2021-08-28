@@ -1,0 +1,11 @@
+@use '../utils/mixins';
+
+//Exercise: 7487-A simple Mixin for out sport theme
+.country__bulllet{
+    @include country-color(france);
+}
+
+//Exercise: 7490-A simple Mixin
+.form__btn {
+    @include form_btn (medium,$font-btn, small-caps, 220px,90px, 24px);
+}
