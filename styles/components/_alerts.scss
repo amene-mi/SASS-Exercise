@@ -1,0 +1,24 @@
+@use '../utils/colors';
+
+.alertbox {
+    width: 200px; 
+    & .message { 
+        border: 1px solid $Red; 
+       & .title { 
+           color: $Red; 
+        }
+   }
+   & .profile { 
+       border: 2px solid $blue-dark; 
+       & .titlle { 
+           color: $blue-dark; 
+           & > a { 
+               color: $navy; 
+               &:hover { 
+                    color: $blue-dark; 
+                    font-weight:bold; 
+                } 
+           } 
+   } 
+} 
+}
