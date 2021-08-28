@@ -1,0 +1,12 @@
+@import "./colors";
+
+//Exercise: 7427-Variables in SASS
+//theme-dark 
+$bg-dark: $blue-dark;
+$text-dark: lighten($blue-dark, 60%);
+//theme-light
+$bg-light: $gray;
+$text-light: darken($gray, 60%);
+
+//Exercise: 7490-A simple Mixin
+$font-btn:"helvetica, arial, sans-serif";

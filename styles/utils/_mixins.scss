@@ -1,0 +1,53 @@
+@use "sass:map";
+@use "./variables";
+
+//Exercise: 7427-Variables in SASS
+@mixin theme($color: light) {
+    @if ($color == light) {
+      &_light{
+        &_text{
+            @debug "text-light: #{$bg-light}";
+            color: $text-light;
+        }
+        &_bg{
+            background-color: $bg-light;
+        }
+      }
+    }
+  
+    @if ($color == dark) {
+      &_dark{
+        &_text{
+            @debug "text-dark: #{$bg-dark}";
+            color: $text-dark;
+        }
+        &_bg{
+            background-color: $bg_dark;
+        }
+      }
+    }
+  }
+
+  //Exercise: 7487-A simple Mixin for out sport theme
+$country-colors: (
+  "iran": #2ecc71,
+  "france": #2980b9,
+);
+@mixin country-color($country){
+  &-#{$country}{
+    color: map.get($country-colors, $country);
+  }
+}
+
+//Exercise: 7490-A simple Mixin
+@mixin form_btn($type,$font_famiy, $font_variant, $width,$height, $font_size){
+  &-#{$type}{
+    font-family: $font_famiy;
+    font-size: $font_size;
+    font-variant: $font_variant;
+    width: $width;
+    height: $height;
+    color: #2980b9;
+    text-align:center;
+  }
+}
