@@ -1,0 +1,9 @@
+@import "../utils/mixins";
+.container {
+    height: auto;
+    &__div{
+        @include theme(dark);
+        display: flex;
+        align-items: center;
+    }
+}
